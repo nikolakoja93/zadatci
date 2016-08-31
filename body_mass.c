@@ -3,11 +3,12 @@
 #include <math.h>
 
  int main() {
-  int i,n;
-  float BMI = 0;
-  float weight = 0;
-  float height = 0;
-  int a[n];
+  int i;
+  int n;
+  double BMI[100];
+  double user_weight[100];
+  double user_height[100];
+  
 
   printf("unesi koliko ljudi\n");
   scanf("%d", &n);
@@ -15,17 +16,16 @@
   for (i=0;i<n;i++) {
    
   printf("unesi tezinu tela i visinu tela\n");
-  scanf("%f %f", &weight, &height);
+  scanf("%lf %lf", &user_weight[i], &user_height[i]);
 }
   for (i=0;i<n;i++) {
-  BMI = weight / ((height)*(height));
-  a[n] = BMI;
-   if (a[n] < 18.5) {
-  printf("under  "); }
-   else if (a[n] >= 18.5 || a[n] < 25.0) {
-  printf("normal  "); }
-   else if (a[n] >= 25.0 || a[n] < 30.0) {
-  printf("over  "); }
-   else if (a[n] >= 30.0) {
-  printf("obese  "); }
+  BMI[i] = user_weight[i] / ((user_height[i])*(user_height[i]));
+   if (BMI[i] < 18.5) 
+  printf("under  ");
+   else if (BMI[i] > 18.5 && BMI[i] <= 25.0) 
+  printf("normal  "); 
+   else if (BMI[i] > 25.0 && BMI[i] <= 30.0) 
+  printf("over  "); 
+   else if (BMI[i] > 30.0)
+  printf("obese  ");
 }}
