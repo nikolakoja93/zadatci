@@ -43,7 +43,7 @@ int main(void) {
      prvi_prvi ( i, user_weight, user_height, BMI );
      break;
    case '2':
-     printf("\n\nBMI za vise osoba\n");
+     printf("\n\nExit\n");
      return 0;
    default:
      printf("\n\nINVALID SELECTION...Please try again\n");
