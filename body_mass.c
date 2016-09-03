@@ -3,35 +3,14 @@
 #include <stdlib.h>
 #include <math.h>
 
-int meni() {
-  int choice = 0;
+int meni(int *choice) {
 
-  while(choice!='4')
- {
    printf("\n\t 1. BMI za jednu osobu");
    printf("\n\t 2. BMI od 40kg do 200kg");
    printf("\n\t 3. Exit");
    printf("\n\n Izaberite sta zelite: ");
-   choice = getchar();
-   switch(choice)
-   {
-   case '1':
-     printf("\n\nBMI za jednu osobu\n");
-     prvi_prvi ();
-     break;
-   case '2':
-     printf("\n\nBMI od 40kg do 200kg\n");
-     kilogrami ();
-     break;
-   case '3':
-     printf("\n\nExit\n");
-     return 0;
-   default:
-     printf("\n\nINVALID SELECTION...Please try again\n");
-   }
-   (void)getchar();
- }
- return 0;
+   scanf("%d", &*choice);
+   return *choice;
 }
 
 kilogrami() {
@@ -69,5 +48,21 @@ prvi_prvi() {
 }
 
 int main() {
-  meni();
+  int choice;
+  while (choice !=4) {
+  meni(&choice);
+  switch (choice) {
+  case 1:
+    prvi_prvi();
+    break;
+  case 2:
+    kilogrami();
+    break;
+  case 3:
+    printf("\n\t 3. Exit");
+    return 0;
+  default:
+    printf("invalid informacion, try again\n");
+    }
+  }
 }
