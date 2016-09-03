@@ -4,17 +4,16 @@
 #include <math.h>
 
 void kilogrami() {
-  double user_weight = 40;
-  double user_height = 1.50;
+  double user_weight = 0;
+  double user_height = 0;
   double BMI = 0;
-  while ( user_weight < 200 && user_height < 2.20 ) {
-  BMI = user_weight / ((user_height)*(user_height));
-  user_weight = user_weight + 10;
-  user_height = user_height + 0.10;
-  printf("\ntablica BMI\n");
-  printf("%.2lf\t%.2lf\t%.2lf\t", user_weight, user_height, BMI);
-}}
-
+  for (user_weight = 40; user_weight <= 200; (user_weight = user_weight + 10)) {
+    for (user_height = 1.50; user_height <= 2.20; (user_height = user_height + 0.10)) {
+      BMI = user_weight / ((user_height)*(user_height));
+      printf("%.2lf\t%.2lf\tBMI = %.2lf\t\n", user_weight, user_height, BMI);
+    }
+  }
+}
 
 void prvi_prvi() {
   double user_weight;
@@ -38,7 +37,7 @@ void prvi_prvi() {
   printf("%lf  ", BMI); }
 }
 
-int main(tezina, visina, BMI) {
+int main() {
   int choice = 0;
 
   while(choice!='4')
