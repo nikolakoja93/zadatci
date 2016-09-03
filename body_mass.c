@@ -9,9 +9,8 @@ void kilogrami() {
   double BMI = 0;
   while ( user_weight < 200 && user_height < 2.20 ) {
   BMI = user_weight / ((user_height)*(user_height));
-  user_weight = user_weight + 5;
+  user_weight = user_weight + 10;
   user_height = user_height + 0.10;
-  BMI = BMI + 10;
   printf("\ntablica BMI\n");
   printf("%.2lf\t%.2lf\t%.2lf\t", user_weight, user_height, BMI);
 }}
